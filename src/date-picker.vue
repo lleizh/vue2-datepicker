@@ -84,7 +84,7 @@
 import { parse, format, getWeek } from 'date-format-parse';
 import { isValidDate, isValidRangeDate, getValidDate } from './util/date';
 import { pick, isObject, mergeDeep } from './util/base';
-import { getLocale } from './locale';
+import { getLocale, getLocaleFieldValue } from './locale';
 import Popup from './popup';
 import IconCalendar from './icon/icon-calendar';
 import IconClose from './icon/icon-close';
@@ -115,7 +115,7 @@ export default {
   },
   provide() {
     return {
-      locale: this.locale,
+      t: this.getLocaleFieldValue,
       getWeek: this.getWeek,
     };
   },
@@ -435,6 +435,9 @@ export default {
     },
     hasSlot(name) {
       return !!(this.$slots[name] || this.$scopedSlots[name]);
+    },
+    getLocaleFieldValue(path) {
+      return getLocaleFieldValue(path, this.locale);
     },
   },
 };
