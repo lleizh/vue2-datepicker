@@ -1,3 +1,13 @@
+<a name="3.3.0"></a>
+# [3.3.0](https://github.com/mengxiong10/vue2-datepicker/compare/v3.2.1...v3.3.0) (2019-12-06)
+
+
+### Features
+
+* add vuetify ([0cf6625](https://github.com/mengxiong10/vue2-datepicker/commit/0cf6625))
+
+
+
 <a name="3.2.1"></a>
 ## [3.2.1](https://github.com/mengxiong10/vue2-datepicker/compare/v3.2.0...v3.2.1) (2019-12-03)
 
