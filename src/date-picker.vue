@@ -9,28 +9,23 @@
   >
     <div v-if="!inline" class="mx-input-wrapper" @mousedown="openPopup" @touchstart="openPopup">
       <slot name="input">
-        <input
+        <v-text-field
           ref="input"
           v-bind="{ name: 'date', type: 'text', autocomplete: 'off', value: text, ...inputAttr }"
-          :class="inputClass"
+          :label="placeholder"
           :disabled="disabled"
           :readonly="!editable"
-          :placeholder="placeholder"
           @keydown="handleInputKeydown"
           @focus="handleInputFocus"
           @blur="handleInputBlur"
           @input="handleInputInput"
           @change="handleInputChange"
-        />
+        >
+        </v-text-field>
       </slot>
       <i v-if="showClearIcon" class="mx-icon-clear" @mousedown.stop="handleClear">
         <slot name="icon-clear">
           <icon-close></icon-close>
-        </slot>
-      </i>
-      <i class="mx-icon-calendar">
-        <slot name="icon-calendar">
-          <icon-calendar></icon-calendar>
         </slot>
       </i>
     </div>

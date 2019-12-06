@@ -8,9 +8,14 @@
       <p>datetime range</p>
       <date-picker
         v-model="value2"
+        :input-attr="{
+          prependIcon: 'place',
+          readonly: true,
+          clearable: true,
+        }"
         type="datetime"
         range
-        placeholder="Select datetime range"
+        placeholder="Vuetify select datetime range"
       ></date-picker>
     </section>
   </div>
